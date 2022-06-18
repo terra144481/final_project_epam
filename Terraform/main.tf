@@ -14,12 +14,6 @@ provider "aws" {
   region  = "eu-central-1"
 }
 
-#resource "aws_key_pair" "dev_key" {
-#  key_name   = "dev_key"
-#  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCypRias+4IENtTOd7ixjY+ArJgcPG5e8Z/2hoREvhlA81FMlVSDMR4IF5exEPJGIZfa9d5wW5NpHqTTU2dcG01Rw5Di8zMp0ZdUEewpkDbhe/Zr+8MG4rMpUgMJnsc9hkVZ4iIeixJpyhFzg68YnHo/s8szNEtHae42Fh8K7Sff6RmAdAfFlFFMJlt9yih0BBN5SlrqbBNQ6Zk4rWq911q1KBPQyiYmKjvXMP7I1px4eewVHIrMVt+cldMdArG2D5/20omSqGGZqUAsRcD6VRg0I7KwpChZWgQCP3seN1Ka+n5rgUMaVbcOPwwSwyQpHjxRl80PYtC20Qa365OpTvmFEy5OJPv5hUO4pxpB8pYA0J2XQfP4aZJUAM/8ZR4BZd/gNtMsSQ8lGknWqTx5We0NLeQNN+aGlMIYmfwNLxx8ZXyuUh62ZEpV5Y2fM9Rlodz7z/aQIXY/45twHu91FOAcZKiWE0rZP97VtvkZG3HCpA2joJ0q9PdjxkbWi+mVIs= user@DESKTOP-NFU8E2P"
-#}
-
-
 resource "aws_instance" "develop" {
   ami                    = "ami-02584c1c9d05efa69" # ubuntu 20.04
   instance_type          = "t2.micro"
