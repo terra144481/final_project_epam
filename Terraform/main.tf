@@ -6,6 +6,8 @@ terraform {
     }  
   }
   required_version = ">= 0.14.9"
+
+#copy *.tfstate to aws s3  
   backend "s3" {
     bucket = "ivan-lovkin-terraform-state"
     key    = "dev/terraform.tfstate"
