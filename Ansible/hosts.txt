@@ -1,2 +1,2 @@
 [prod]
-ubuntu ansible_host=54.93.102.230 ansible_user=ubuntu ansible_ssh_private_key=/home/ubuntu/.ssh/id_rsa
+ubuntu ansible_host=18.197.66.194 ansible_user=ubuntu ansible_ssh_private_key=/home/ubuntu/.ssh/id_rsa
