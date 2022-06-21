@@ -25,13 +25,6 @@ resource "aws_instance" "develop" {
   instance_type          = "t2.micro"
   key_name               = "docker_key"
   vpc_security_group_ids = [aws_security_group.dev_server.id]
-#  user_data              = <<-EOF
-#		#! /bin/bash
-#		sudo apt update -y
-#    sudo git clone git@github.com:terra144481/final_project_epam.git /home/ubuntu/git/
-#    sudo git config --global user.name "Ivan Lovkin"
-#    sudo git config --global user.email "terra144481@gmail.com"
-#  EOF
 
   tags = {
     Name    = "Development server"
