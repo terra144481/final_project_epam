@@ -23,7 +23,7 @@ provider "aws" {
 resource "aws_instance" "develop" {
   ami                    = "ami-02584c1c9d05efa69" # ubuntu 20.04
   instance_type          = "t2.micro"
-  key_name               = "dev_key"
+  key_name               = "docker_key"
   vpc_security_group_ids = [aws_security_group.dev_server.id]
   user_data              = <<-EOF
 		#! /bin/bash
@@ -68,7 +68,7 @@ resource "aws_instance" "product" {
   ami                    = "ami-02584c1c9d05efa69" # ubuntu 20.04
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.prod_server.id]
-  key_name               = "dev_key"	
+  key_name               = "docker_key"	
 
   tags = {
     Name    = "Production server"
