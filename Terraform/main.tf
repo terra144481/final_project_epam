@@ -28,7 +28,7 @@ resource "aws_instance" "develop" {
   user_data              = <<-EOF
 		#! /bin/bash
 		sudo apt update -y
-    sudo git clone https://github.com/terra144481/final_project_epam.git /home/ubuntu/git/
+    sudo git clone git@github.com:terra144481/final_project_epam.git /home/ubuntu/git/
     sudo git config --global user.name "Ivan Lovkin"
     sudo git config --global user.email "terra144481@gmail.com"
   EOF
