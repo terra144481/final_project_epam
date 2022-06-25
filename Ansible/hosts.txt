@@ -1,5 +1,13 @@
 [prod]
-ubuntu ansible_host=18.156.1.7 ansible_user=ubuntu ansible_ssh_private_key=/home/ubuntu/.ssh/id_rsa
+ubuntu ansible_host=18.156.1.7 
 
 [dev]
-ubuntu ansible_host=35.159.51.234 ansible_user=ubuntu ansible_ssh_private_key=/home/ubuntu/.ssh/id_rsa
+ubuntu ansible_host=35.159.51.234 
+
+[serv:children]
+prod
+dev
+
+[serv:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key=/home/ubuntu/.ssh/docker_key.pem
