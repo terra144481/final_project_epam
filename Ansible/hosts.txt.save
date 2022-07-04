@@ -1,2 +1,0 @@
-[prod]
-ubuntu ansible_host=35.158.89.51 ansible_user=ubuntu ansible_ssh_private_key=/home/ubuntu/.ssh/dev_key.pem
